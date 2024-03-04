@@ -13,8 +13,12 @@ $query = $connection->prepare("SELECT * FROM posts");
 $query->execute();
 
 // 3. Saņemt datus no mySQL uz PHP
-$posts = $query->fetchAll();
+$posts = $query->fetchAll(PDO::FETCH_ASSOC);
 
-dd($posts);
+echo "<h1>Posts</h1>";
 
-
+echo "<ol>";
+foreach($posts as $post) {
+  echo "<li>" . $post["title"] . "</li>";
+}
+echo "</ol>";
