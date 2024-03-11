@@ -8,11 +8,6 @@ echo "Hi, IPa22 👋";
 
 $db = new Database($config);
 $posts = $db->execute("SELECT * FROM posts");
-$posts = $db->execute("SELECT * FROM posts");
-$posts = $db->execute("SELECT * FROM posts");
-$posts = $db->execute("SELECT * FROM posts");
-$posts = $db->execute("SELECT * FROM posts");
-$posts = $db->execute("SELECT * FROM posts");
 
 echo "<h1>Posts</h1>";
 
@@ -22,12 +17,4 @@ foreach($posts as $post) {
 }
 echo "</ol>";
 
-// Padot argumentu funkcijai
-$mainīgais = "Kaķis";
-
-function makeDog($dog) {
-  echo $dog . " ir suns patiesībā";
-}
-
-makeDog($mainīgais);
 
