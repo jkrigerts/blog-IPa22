@@ -31,7 +31,10 @@ echo "</form>";
 
 
 echo "<form>";
-echo "<input name='category'/>";
+// Null coalescing operator
+echo "<input name='category' value='". ($_GET["category"] ?? '') ."'/>";
+
+
 echo "<button>Filter by Category</button>";
 echo "</form>";
 
