@@ -4,7 +4,6 @@ require "functions.php";
 $config = require "config.php";
 require "Database.php";
 
-echo "Hi, IPa22 👋";
 
 $db = new Database($config);
 
@@ -23,26 +22,4 @@ if (isset($_GET["category"]) && $_GET["category"] != "") {
 }
 $posts = $db->execute($query_string, $params);
 
-
-?>
-
-<form>
-  <input name='id'/>
-  <button>Filter by ID</button>
-</form>
-
-<form>
-  <input name='category' value='<?= ($_GET["category"] ?? '') ?>'/>
-  <button>Filter by Category</button>
-</form>
-
-
-<h1>Posts</h1>
-
-<ol>
-<?php foreach($posts as $post) { ?>
-  <li> <?= $post["title"] ?> </li>
-<?php } ?>
-</ol>
-
-
+require "views/index.view.php";
