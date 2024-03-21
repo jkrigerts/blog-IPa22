@@ -4,7 +4,7 @@
 
 <h1>Create a New Post ❤️</h1>
 
-<form method="GET">
+<form method="POST">
   <label>
     <span>Title:</span>
     <input name="title"/>
