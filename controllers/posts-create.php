@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // izveido, ka lietotājs var
   // pievienot pasākumus un kolektīvus
   // projektā CKC
+  // ošs ir mazzs
 
 }
 
