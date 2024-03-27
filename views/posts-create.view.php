@@ -7,7 +7,10 @@
 <form method="POST">
   <label>
     <span>Title:</span>
-    <input name="title"/>
+    <input name="title" value="<?= $_POST["title"] ?? "" ?>"/>
+    <?php if (isset($errors["title"])) { ?>
+      <p><?= $errors["title"] ?></p>
+    <?php  } ?>
   </label>
   <label>
     <span>Category ID:</span>
@@ -16,6 +19,9 @@
       <option value="2">music</option>
       <option value="3">food</option>
     </select>
+    <?php if (isset($errors["category_id"])) { ?>
+      <p><?= $errors["category_id"] ?></p>
+    <?php  } ?>
   </label>
   <button>Save</button>
 </form>
