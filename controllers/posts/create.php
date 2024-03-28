@@ -33,9 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $page_title = "Create a Post";
-require "views/posts-create.view.php";
-
-// 1. Vai tev iet blogs ar validāciju? Sataisi
-// 2. Pieliec validāciju CKC :)
+require "views/posts/create.view.php";
 
 

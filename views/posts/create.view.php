@@ -1,6 +1,6 @@
 
-<?php require "components/head.php" ?>
-<?php require "components/navbar.php" ?>
+<?php require "views/components/head.php" ?>
+<?php require "views/components/navbar.php" ?>
 
 <h1>Create a New Post ❤️</h1>
 
@@ -27,4 +27,4 @@
 </form>
 
 
-<?php require "components/footer.php" ?>
+<?php require "views/components/footer.php" ?>

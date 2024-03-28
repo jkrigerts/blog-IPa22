@@ -1,3 +1,7 @@
 h1 {
   color: red;
 }
+
+.delete-form {
+  display: inline-block;
+}
