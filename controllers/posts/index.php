@@ -1,6 +1,5 @@
 <?php
 // Dabūt datus no datu bāzes un izvadīt tos HTML
-require "functions.php";
 $config = require "config.php";
 require "Database.php";
 
@@ -20,7 +19,7 @@ if (isset($_GET["category"]) && $_GET["category"] != "") {
   $query_string .= " JOIN categories ON posts.category_id = categories.id WHERE categories.name=:category";
   $params[":category"] = $_GET["category"];
 }
-$posts = $db->execute($query_string, $params);
+$posts = $db->execute($query_string, $params)->fetchAll();
 
 
 $page_title = "Posts";

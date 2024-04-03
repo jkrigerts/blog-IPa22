@@ -16,7 +16,7 @@
 <ol>
 <?php foreach($posts as $post) { ?>
   <li>
-    <?= htmlspecialchars($post["title"]) ?>
+    <a href="/show?id=<?= $post["id"] ?>"><?= htmlspecialchars($post["title"]) ?></a>
     <form class="delete-form" method="POST" action="/delete">
       <input type="hidden" name="id" value="<?= $post["id"] ?>" />
       <button>&times;</button>

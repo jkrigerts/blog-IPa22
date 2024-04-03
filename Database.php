@@ -19,6 +19,6 @@ class Database {
     $query->execute($params);
 
     // 3. Saņemt datus no mySQL uz PHP un nosūtīt tālāk
-    return $query->fetchAll();
+    return $query;
   }
 }
